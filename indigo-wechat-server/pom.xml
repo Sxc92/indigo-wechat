@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.indigo.wechat</groupId>
+        <artifactId>indigo-wechat</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>indigo-wechat-server</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>indigo-wechat-auth</module>
+        <module>indigo-wechat-file</module>
+        <module>indigo-wechat-main</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.indigo.wechat</groupId>
+            <artifactId>indigo-wechat-pojo</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+    </dependencies>
+</project>

@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: file
+server:
+  port: 9077
+  tomcat:
+    uri-encoding: UTF-8
+    max-swallow-size: -1 # 不限制大小
+
+logging:
+  level:
+    root: info
