@@ -1,12 +1,15 @@
-spring:
-  application:
-    name: auth
-server:
-  port: 9099
-  tomcat:
-    uri-encoding: UTF-8
-    max-swallow-size: -1 # 不限制大小
-
 logging:
   level:
     root: info
+spring:
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 5
+          max-wait: -1ms
+          min-idle: 2
+      database: 1

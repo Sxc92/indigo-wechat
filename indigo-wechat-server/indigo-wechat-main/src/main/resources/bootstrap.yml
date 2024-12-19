@@ -1,0 +1,20 @@
+server:
+  port: 9077
+  tomcat:
+    uri-encoding: UTF-8
+    max-swallow-size: -1 # 不限制大小
+nacos:
+  server-ip: 127.0.0.1
+  port: 8848
+
+spring:
+  application:
+    name: main
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${nacos.server-ip}:${nacos.port}
+        namespace: public
+      config:
+        server-addr: ${nacos.server-ip}:${nacos.port}
+        namespace: public

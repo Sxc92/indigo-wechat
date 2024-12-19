@@ -1,5 +1,5 @@
 server:
-  port: 9099
+  port: 8011
   tomcat:
     uri-encoding: UTF-8
     max-swallow-size: -1 # 不限制大小
@@ -9,7 +9,7 @@ nacos:
 
 spring:
   application:
-    name: auth
+    name: gateway
   cloud:
     nacos:
       discovery:
