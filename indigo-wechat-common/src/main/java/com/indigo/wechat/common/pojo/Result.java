@@ -1,6 +1,6 @@
 package com.indigo.wechat.common.pojo;
 
-import com.indigo.wechat.common.constant.CommonCodeEnums;
+import com.indigo.wechat.common.constant.ResponseStatusEnums;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -35,18 +35,18 @@ public class Result<T> {
     private int code;
 
     public static <T> Result<T> success(T data) {
-        return new Result<>(data, CommonCodeEnums.SUCCESS.getMsg(), CommonCodeEnums.SUCCESS.getCode());
+        return new Result<>(data, ResponseStatusEnums.SUCCESS.getMsg(), ResponseStatusEnums.SUCCESS.getCode());
     }
 
-    public static <T> Result<T> success(CommonCodeEnums codeEnum) {
+    public static <T> Result<T> success(ResponseStatusEnums codeEnum) {
         return new Result<>(null, codeEnum.getMsg(), codeEnum.getCode());
     }
 
-    public static <T> Result<T> error(CommonCodeEnums codeEnum) {
+    public static <T> Result<T> error(ResponseStatusEnums codeEnum) {
         return new Result<>(null, codeEnum.getMsg(), codeEnum.getCode());
     }
 
     public static <T> Result<T> error() {
-        return new Result<>(null, CommonCodeEnums.ERROR.getMsg(), CommonCodeEnums.ERROR.getCode());
+        return new Result<>(null, ResponseStatusEnums.ERROR.getMsg(), ResponseStatusEnums.ERROR.getCode());
     }
 }

@@ -42,3 +42,10 @@ spring:
           uri: lb://main
           predicates:
             - Path=/main/**
+
+indigo:
+  gateway:
+    ipLimitTime: 3
+    ipLimitCount: 20 #
+    ipLimitTimeUnit: seconds # 时间单位
+    silentTime: 30 # 静默时间

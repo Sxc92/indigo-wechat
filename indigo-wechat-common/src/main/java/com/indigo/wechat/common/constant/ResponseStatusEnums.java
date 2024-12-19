@@ -11,7 +11,7 @@ import lombok.Getter;
  */
 @Getter
 @AllArgsConstructor
-public enum CommonCodeEnums implements BasicEnums {
+public enum ResponseStatusEnums implements BasicEnums {
     SUCCESS(200, "SUCCESS"),
 
     ERROR(500, "ERROR"),
